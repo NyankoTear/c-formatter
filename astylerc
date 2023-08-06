@@ -1,0 +1,66 @@
+# Kernighan & Ritchie style uses linux braces. Opening braces are broken from namespaces, classes, and function definitions. The braces are attached to everything else, including arrays, structs, enums, and statements within a function.
+--style=kr
+
+# Indent using 4 spaces per indent
+--indent=spaces=4
+
+# Attach the closing 'while' of a 'do-while' statement to the closing brace. This has precedence over both the brace style and the break closing braces option.
+--attach-closing-while
+
+# Indent 'case X:' blocks from the 'case X:' headers. Case statements not enclosed in blocks are NOT indented.
+--indent-cases
+
+# Indent preprocessor blocks at brace level zero and immediately within a namespace. There are restrictions on what will be indented. Blocks within methods, classes, arrays, etc., will not be indented. Blocks containing braces or multi-line define statements will not be indented. Without this option the preprocessor block is not indented.
+--indent-preproc-block
+
+# Indent multi-line preprocessor definitions ending with a backslash.
+--indent-preproc-define
+
+# Indent C++ comments beginning in column one. By default C++ comments beginning in column one are assumed to be commented-out code and not indented. This option will allow the comments to be indented with the code.
+--indent-col1-comments
+
+# Set the minimal indent that is added when a header is built of multiple lines.
+# No minimal indent. The lines will be aligned with the paren on the preceding line.
+--min-conditional-indent=0
+
+# Set the  maximum of 120 spaces to indent a continuation line. This option will prevent continuation lines from extending too far to the right. Setting a larger value will allow the code to be extended further to the right.
+--max-continuation-indent=120
+
+# Insert space padding around operators. This will also pad commas. Any end of line comments will remain in the original column, if possible. Note that there is no option to unpad. Once padded, they stay padded.
+--pad-oper
+
+# Insert space padding after commas. This is not needed if pad-oper is used. Any end of line comments will remain in the original column, if possible.
+--pad-comma
+
+# Insert space padding between a header (e.g. 'if', 'for', 'while'...) and the following paren. Any end of line comments will remain in the original column, if possible.
+--pad-header
+
+# Remove extra space padding around parens on the inside and outside. Any end of line comments will remain in the original column, if possible.
+--unpad-paren
+
+#  Remove padding around square brackets on both the outside and the inside. 
+--unpad-brackets
+
+#  Remove superfluous empty lines exceeding the given number 1.
+--squeeze-lines=1
+
+# Remove superfluous whitespace
+--squeeze-ws
+
+# Attach a pointer or reference operator (*, &, or ^) to either the variable type (left)
+--align-pointer=type
+
+# Break one line headers (e.g. 'if', 'while', 'else', ...) from a statement residing on the same line. If the statement is enclosed in braces, the braces will be formatted according to the requested brace style. 
+--break-one-line-headers
+
+# Add braces to unbraced one line conditional statements (e.g. 'if', 'for', 'while'...). The statement must be on a single line. The braces will be added according to the requested brace style. If no style is requested the braces will be attached. 
+--add-braces
+
+# Attach the return type to the function name (function definitions).
+--attach-return-type
+
+# Attach the return type to the function name (function declarations).
+--attach-return-type-decl
+
+# Do not retain a backup of the original file. The original file is purged after it is formatted
+--suffix=none
